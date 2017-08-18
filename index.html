@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kyaukkar.com | Coming Soon</title>
+	<style type="text/css">
+		body {
+			background-color: #333;
+		}
+		.contact_body{
+			width: 80%;
+			height: auto;
+			margin-top: 15%;
+			margin-left: 10%;
+			border: 2px solid #fff;
+			border-radius: 5px;
+		}
+		.coming_text{
+			width: 100%;
+			text-align: center;
+			margin-top: 5%;
+			font-size: 5em;
+			color: #ffd700;
+		}
+		.title_text {
+			width: 100%;
+			text-align: center;
+			margin-top: 5%;
+			font-size: 2em;
+			color: #ffd700;
+		}
+		.clock {
+			width: 100%;
+			text-align: center;
+			margin-top: 5%;
+			font-size: 1em;
+			color: #ffd700;
+		}
+	</style>
+</head>
+<body>
+<header></header>
+<div class="contact_body">
+	<p class="coming_text">COMMING SOON</p>
+	<p class="title_text">KYAUKKAR.COM</p>
+	<p id="clock" class="clock"></p>
+</div>
+<footer></footer>
+<script type="text/javascript">
+var run = startTime();
+function startTime() {	
+   var today = new Date();
+   var h = today.getHours();
+   var m = today.getMinutes();
+   var s = today.getSeconds();
+   m = checkTime(m);
+   s = checkTime(s);
+   var current = h + ":" + m + ":" + s;
+   document.getElementById('clock').innerHTML = current;
+   var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</body>
+</html>
